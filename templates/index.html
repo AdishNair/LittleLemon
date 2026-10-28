@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Little Lemon Restaurant</title>
+    <link rel="stylesheet" href="{% static 'restaurant/styles.css' %}">
+  </head>
+  <body>
+    <main>
+      <img
+        class="logo"
+        src="{% static 'restaurant/littlelemon.png' %}"
+        alt="Little Lemon"
+      >
+      <h1>Welcome to Little Lemon Restaurant</h1>
+      <p>Explore our menu or reserve a table through the REST API.</p>
+      <nav aria-label="API links">
+        <a href="{% url 'restaurant:menu-items' %}">Menu API</a>
+        <a href="/restaurant/booking/tables/">Booking API</a>
+      </nav>
+    </main>
+  </body>
+</html>
